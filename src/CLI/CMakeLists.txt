@@ -10,4 +10,4 @@ Ubpa_AddTarget(
     "${PROJECT_SOURCE_DIR}/include/ULua"
 )
 
-set_target_properties ( ${luac} PROPERTIES OUTPUT_NAME lua CLEAN_DIRECT_OUTPUT 1 )
+set_target_properties ( ${lua} PROPERTIES OUTPUT_NAME lua CLEAN_DIRECT_OUTPUT 1 )
