@@ -97,7 +97,6 @@ endif ( )
 #==========================
 
 Ubpa_AddTarget(
-  TEST
   MODE INTERFACE
   ADD_CURRENT_TO NONE
   SOURCE
