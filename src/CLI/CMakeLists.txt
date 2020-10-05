@@ -1,6 +1,6 @@
 Ubpa_AddTarget(
   MODE EXE
-  RET_TARGET_NAME lua
+  OUTPUT_NAME lua
   LIB
     Ubpa::ULua_core
   SOURCE
@@ -9,5 +9,3 @@ Ubpa_AddTarget(
     "${PROJECT_SOURCE_DIR}/src/common"
     "${PROJECT_SOURCE_DIR}/include/ULua"
 )
-
-set_target_properties ( ${lua} PROPERTIES OUTPUT_NAME lua CLEAN_DIRECT_OUTPUT 1 )

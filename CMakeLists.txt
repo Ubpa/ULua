@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
 
-project(ULua VERSION 0.1.0)
+project(ULua VERSION 0.1.1)
 message(STATUS "[Project] ${PROJECT_NAME}")
 
 include(cmake/InitUCMake.cmake)
@@ -17,4 +17,8 @@ Ubpa_DownloadZip(
 include ( cmake/dist.cmake )
 Ubpa_AddSubDirsRec(src)
 
-Ubpa_Export(DIRECTORIES "include")
+Ubpa_Export(
+  TARGET
+  DIRECTORIES
+    "include"
+)
