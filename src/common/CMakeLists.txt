@@ -48,7 +48,7 @@ else ( )
   endif ( )
 endif ( )
 
-find_package ( readline )
+find_package ( readline QUITE )
 if ( readline_FOUND )
   option ( LUA_USE_READLINE "Use readline in the Lua CLI." ON )
 endif ( )
@@ -96,6 +96,15 @@ endif ( )
 
 #==========================
 
+set(c_options "")
+if(MSVC)
+  #
+elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
+  list(APPEND c_options "-Wstring-plus-int")
+elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
+  #
+endif()
+
 Ubpa_AddTarget(
   MODE INTERFACE
   ADD_CURRENT_TO NONE
@@ -107,4 +116,6 @@ Ubpa_AddTarget(
     "${PROJECT_SOURCE_DIR}/src/common"
   LIB
     ${LIBS}
+  C_OPTION_PRIVATE
+    ${c_options}
 )
