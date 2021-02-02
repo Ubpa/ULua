@@ -48,7 +48,7 @@ else ( )
   endif ( )
 endif ( )
 
-find_package ( readline QUITE )
+find_package ( readline QUIET )
 if ( readline_FOUND )
   option ( LUA_USE_READLINE "Use readline in the Lua CLI." ON )
 endif ( )
