@@ -100,7 +100,7 @@ set(c_options "")
 if(MSVC)
   #
 elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
-  list(APPEND c_options "-Wstring-plus-int")
+  list(APPEND c_options "-Wno-string-plus-int")
 elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
   #
 endif()
